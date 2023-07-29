@@ -250,6 +250,110 @@ const Honeys: Honey[] = [
       },
     ],
   },
+  {
+    title: "World Honey",
+    items: [
+      {
+        id: 1,
+        name: "Miere de mană 270g",
+        description: "",
+        price: 30.0,
+        image: "./assets/international/1.jpg",
+      },
+      {
+        id: 2,
+        name: "MIERE DE MANUKA MGO 250+ 270g",
+        description: "",
+        price: 116.0,
+        image: "./assets/international/2.jpg",
+      },
+      {
+        id: 3,
+        name: "Miere de lavandă 270g",
+        description: "",
+        price: 33.0,
+        image: "./assets/international/3.jpg",
+      },
+      {
+        id: 4,
+        name: "Miere de portocal 270g",
+        description: "",
+        price: 33.0,
+        image: "./assets/international/4.jpg",
+      },
+      {
+        id: 5,
+        name: "Miere de eucalipt 270g",
+        description: "",
+        price: 33.0,
+        image: "./assets/international/5.jpg",
+      },
+      {
+        id: 6,
+        name: "Miere de lămâi 270 g",
+        description: "",
+        price: 33.0,
+        image: "./assets/international/6.jpg",
+      },
+      {
+        id: 7,
+        name: "Miere de castan 270g",
+        description: "",
+        price: 33.0,
+        image: "./assets/international/7.jpg",
+      },
+      {
+        id: 8,
+        name: "Miere polifloră din Cuba 270g",
+        description: "",
+        price: 25.0,
+        image: "./assets/international/8.jpg",
+      },
+    ],
+  },
+  {
+    title: "Tonic",
+    items: [
+      {
+        id: 1,
+        name: "Apitotal forte 200 g",
+        description: "APITOTAL FORTE 200g - Imunitate si Vitalitate",
+        price: 61.0,
+        image: "./assets/tonic/1.jpg",
+      },
+      {
+        id: 2,
+        name: "Apijunior imunizant si vitaminizant 200 g",
+        description: "APIJUNIOR 200g - Imunizant si Vitaminizant",
+        price: 29.0,
+        image: "./assets/tonic/2.jpg",
+      },
+      {
+        id: 3,
+        name: "Păstură in Miere 200g",
+        description:
+          "PASTURA IN MIERE 200g - Tonic general cu efect regenerator",
+        price: 38.0,
+        image: "./assets/tonic/3.jpg",
+      },
+      {
+        id: 4,
+        name: "Pachet imunitate adulti",
+        description:
+          "APITOTAL FORTE 200g - Imunitate si Vitalitate + SPRAY DE GAT FORTE cu Propolis 20ml",
+        price: 77.0,
+        image: "./assets/tonic/4.jpg",
+      },
+      {
+        id: 5,
+        name: "Pachet imunitate copii",
+        description:
+          "APIJUNIOR 200g - Imunizant si Vitaminizant + SPRAY DE GAT Propolis API JUNIOR 20ml",
+        price: 48.0,
+        image: "./assets/tonic/5.jpg",
+      },
+    ],
+  },
 ]
 
 export default Honeys

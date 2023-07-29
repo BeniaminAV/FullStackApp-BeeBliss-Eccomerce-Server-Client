@@ -20,9 +20,11 @@ export default (router: express.Router) => {
 
   //router for get all Candy
   router.get("/product/candy", getAllCandy)
-  //router for gey Candy by id
+  //router for get Candy by id
   router.get("/product/candy/:id", getCandyById)
 
+  //router for all world-honey
   router.get("/product/world-honey", getAllWorldHoney)
+  //router for get world-honey by id
   router.get("/product/world-honey/:id", getWorldHoneyById)
 }

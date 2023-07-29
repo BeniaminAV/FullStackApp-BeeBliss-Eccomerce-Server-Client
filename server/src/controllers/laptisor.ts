@@ -2,6 +2,7 @@ import express from "express"
 import Honey from "../model/honey"
 import Honeys from "../data/honey"
 
+//function for get all Laptisor
 export const getAllLaptisor = (req: express.Request, res: express.Response) => {
   try {
     const laptisorProducts: Honey[] = Honeys.filter(
@@ -14,6 +15,7 @@ export const getAllLaptisor = (req: express.Request, res: express.Response) => {
   }
 }
 
+//function for get Laptisor by id
 export const getLaptisorById = (
   req: express.Request,
   res: express.Response

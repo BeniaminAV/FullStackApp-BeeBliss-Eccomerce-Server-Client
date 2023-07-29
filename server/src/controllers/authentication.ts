@@ -6,6 +6,7 @@ import {
 } from "../db/users"
 import express from "express"
 
+//sign in with email and password
 export const signInAuthWithEmailAndPassword = async (
   req: express.Request,
   res: express.Response
@@ -21,6 +22,7 @@ export const signInAuthWithEmailAndPassword = async (
   }
 }
 
+//create user with username, email, password, confirmPassword
 export const createAuthWithEmailAndPassword = async (
   req: express.Request,
   res: express.Response
@@ -48,6 +50,7 @@ export const createAuthWithEmailAndPassword = async (
   }
 }
 
+// login with google Credentials
 export const loginWithGoogle = async (
   req: express.Request,
   res: express.Response

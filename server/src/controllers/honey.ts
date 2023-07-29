@@ -1,6 +1,6 @@
-import express from "express"
 import Honey from "../model/honey"
 import Honeys from "../data/honey"
+import express from "express"
 
 //function for get all Honey
 export const getAllHoney = (req: express.Request, res: express.Response) => {
@@ -33,7 +33,7 @@ export const getHoneyById = (req: express.Request, res: express.Response) => {
         return res.sendStatus(404)
       }
     } else {
-        return res.sendStatus(404)
+      return res.sendStatus(404)
     }
   } catch (error) {
     return res.sendStatus(400)

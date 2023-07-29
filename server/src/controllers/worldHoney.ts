@@ -1,6 +1,6 @@
 import Honeys from "../data/honey"
-import express from "express"
 import Honey from "../model/honey"
+import express from "express"
 
 //get all Tonic
 export const getAllWorldHoney = (

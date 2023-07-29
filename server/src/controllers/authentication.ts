@@ -1,9 +1,11 @@
-import { authentication, random } from "../helpers"
+import { auth } from "../db/firebase"
 import {
   createUserAuthWithEmailAndPassword,
   signInUserWithEmailAndPassword,
   signInWithGooglePopup,
+  signOutAuth,
 } from "../db/users"
+import { authentication, random } from "../helpers"
 import express from "express"
 
 //sign in with email and password
@@ -14,9 +16,16 @@ export const signInAuthWithEmailAndPassword = async (
   try {
     const { email, password } = req.body
 
-    const existingUser = await signInUserWithEmailAndPassword(email, password)
+    if (!email || !password) {
+      return res.sendStatus(403)
+    }
 
-    return res.status(200).json(existingUser).end()
+    await signInUserWithEmailAndPassword(email, password)
+
+    const currentUser = auth.currentUser
+    const { uid, displayName } = currentUser
+
+    return res.status(200).json({ email, uid, displayName }).end()
   } catch (error) {
     return res.sendStatus(400)
   }
@@ -61,6 +70,31 @@ export const loginWithGoogle = async (
     const { uid, email } = userCredential.user
 
     return res.status(200).json({ uid, email }).end()
+  } catch (error) {
+    return res.sendStatus(400)
+  }
+}
+
+// signOut User
+export const signOutFromApp = async (
+  req: express.Request,
+  res: express.Response
+) => {
+  try {
+    const currentUser = auth.currentUser
+
+    if (!currentUser) {
+      return res.status(401).json({ message: "User not authenticated." })
+    }
+
+    const { uid, email, displayName } = currentUser
+
+    await signOutAuth()
+
+    return res.status(200).json({
+      message: "User signed out successfully.",
+      user: { uid, email, displayName },
+    })
   } catch (error) {
     return res.sendStatus(400)
   }

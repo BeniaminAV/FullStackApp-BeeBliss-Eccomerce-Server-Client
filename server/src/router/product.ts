@@ -1,12 +1,13 @@
 import { getAllWorldHoney, getWorldHoneyById } from "../controllers/worldHoney"
+import { getAllLaptisor, getLaptisorById } from "../controllers/laptisor"
 import { getAllCandy, getCandyById } from "../controllers/candy"
 import { getAllHoney, getHoneyById } from "../controllers/honey"
-import { getAllLaptisor, getLaptisorById } from "../controllers/laptisor"
+import { getAllTonic, getTonicById } from "../controllers/tonic"
 import { getAllProduct } from "../controllers/product"
 import express from "express"
 
 export default (router: express.Router) => {
-  //Router for All Product
+  //router for all rroduct
   router.get("/product", getAllProduct)
   //router for all Laptisor
   router.get("/product/laptisor", getAllLaptisor)
@@ -27,4 +28,9 @@ export default (router: express.Router) => {
   router.get("/product/world-honey", getAllWorldHoney)
   //router for get world-honey by id
   router.get("/product/world-honey/:id", getWorldHoneyById)
+
+  //router for all Tonic
+  router.get("/product/tonic", getAllTonic)
+  //router get all Tonic by id
+  router.get("/product/tonic/:id", getTonicById)
 }

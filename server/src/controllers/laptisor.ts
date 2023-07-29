@@ -1,6 +1,6 @@
-import express from "express"
 import Honey from "../model/honey"
 import Honeys from "../data/honey"
+import express from "express"
 
 //function for get all Laptisor
 export const getAllLaptisor = (req: express.Request, res: express.Response) => {

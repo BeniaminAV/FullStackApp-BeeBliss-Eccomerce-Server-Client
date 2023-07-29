@@ -2,6 +2,7 @@ import Honeys from "../data/honey"
 import express from "express"
 import Honey from "../model/honey"
 
+//get all Tonic
 export const getAllWorldHoney = (
   req: express.Request,
   res: express.Response
@@ -21,6 +22,7 @@ export const getAllWorldHoney = (
   }
 }
 
+//get all Tonic by id
 export const getWorldHoneyById = (
   req: express.Request,
   res: express.Response

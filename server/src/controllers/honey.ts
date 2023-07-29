@@ -2,6 +2,7 @@ import express from "express"
 import Honey from "../model/honey"
 import Honeys from "../data/honey"
 
+//function for get all Honey
 export const getAllHoney = (req: express.Request, res: express.Response) => {
   try {
     const allHoney: Honey[] = Honeys.filter((honey) => honey.title === "Honey")
@@ -16,6 +17,7 @@ export const getAllHoney = (req: express.Request, res: express.Response) => {
   }
 }
 
+//function for get honey by id
 export const getHoneyById = (req: express.Request, res: express.Response) => {
   try {
     const id: number = parseInt(req.params.id)

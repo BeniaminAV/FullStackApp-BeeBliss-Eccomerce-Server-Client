@@ -9,6 +9,7 @@ import {
 const UserMenu = () => {
   return (
     <div className="flex items-center justify-center gap-x-5">
+      
       <div className="lg:flex hidden gap-x-5">
         <LinkRoute label={<AiOutlineHeart size={25} />} to="/favorite" />
         <LinkRoute label={<AiOutlineShoppingCart size={25} />} to="/cart" />
@@ -21,6 +22,7 @@ const UserMenu = () => {
       <div className="lg:hidden ">
         <LinkRoute label={<AiOutlineMenuFold size={25} />} to="" />
       </div>
+      
     </div>
   )
 }

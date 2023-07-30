@@ -14,9 +14,15 @@ const FormField: React.FC<InputProps> = ({
   value,
 }) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
-      <input type={type} name={name} onChange={onChange} value={value} />
+    <div className="relative py-2">
+      <label className="text-md text-zinc-500">{label}</label>
+      <input
+        className="block rounded-md p-2 w-full text-md text-zinc-500 bg-neutral-200 appearance-none"
+        type={type}
+        name={name}
+        onChange={onChange}
+        value={value}
+      />
     </div>
   )
 }

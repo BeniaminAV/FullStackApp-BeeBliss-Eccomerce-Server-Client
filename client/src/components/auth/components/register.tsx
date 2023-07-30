@@ -3,6 +3,7 @@ import axios from "axios"
 import FormField from "./inputFrom"
 import { isEmpty } from "lodash"
 import { toast } from "react-hot-toast"
+import Button from "../../button"
 
 const defaultFormField = {
   userName: "",
@@ -56,9 +57,6 @@ const Register = () => {
       resetForm()
     } catch (error: any) {
       console.log(error)
-      if (email) {
-        toast.error("The email is already in use.")
-      }
     }
   }
 
@@ -69,39 +67,41 @@ const Register = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <FormField
-          label="User Name"
-          type="text"
-          name="userName"
-          value={userName}
-          onChange={handleChange}
-        />
-        <FormField
-          label="Email"
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-        />
-        <FormField
-          label="Password*"
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-        />
-        <FormField
-          label="Confirm Password*"
-          type="password"
-          name="confirmPassword"
-          value={confirmPassword}
-          onChange={handleChange}
-        />
-        <button type="submit">Register now!</button>
-      </form>
-    </div>
+    <form onSubmit={onSubmit}>
+      <FormField
+        label="User Name"
+        type="text"
+        name="userName"
+        value={userName}
+        onChange={handleChange}
+      />
+      <FormField
+        label="Email"
+        type="email"
+        name="email"
+        value={email}
+        onChange={handleChange}
+      />
+      <FormField
+        label="Password*"
+        type="password"
+        name="password"
+        value={password}
+        onChange={handleChange}
+      />
+      <FormField
+        label="Confirm Password*"
+        type="password"
+        name="confirmPassword"
+        value={confirmPassword}
+        onChange={handleChange}
+      />
+      <Button
+        label="Register Now"
+        onClick={onSubmit}
+        bgColor="bg-red-600 hover:bg-red-500"
+      />
+    </form>
   )
 }
 

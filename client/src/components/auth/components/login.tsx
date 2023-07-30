@@ -3,6 +3,8 @@ import { useState } from "react"
 import { toast } from "react-hot-toast"
 import axios from "axios"
 import FormField from "./inputFrom"
+import Button from "../../button"
+import AuthSocial from "./authSocial"
 
 const defaultFormField = {
   email: "",
@@ -71,7 +73,13 @@ const Login = () => {
           value={password}
           onChange={handleChange}
         />
-        <button type="submit">Sign In</button>
+        <Button
+          label="Login"
+          onClick={onSubmit}
+          bgColor="bg-green-600 hover:bg-green-500"
+        />
+
+        <AuthSocial />
       </form>
     </>
   )

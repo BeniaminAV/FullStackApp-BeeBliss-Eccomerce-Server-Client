@@ -10,11 +10,13 @@ const Navbar = () => {
       <div className="py-4 border-b-[1px] bg-white">
         <Container>
           <div className="flex flex-row items-center justify-between">
+            
             <Logo />
 
             <Links />
 
             <UserMenu />
+            
           </div>
         </Container>
       </div>

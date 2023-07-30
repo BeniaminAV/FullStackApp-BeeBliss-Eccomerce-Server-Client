@@ -47,6 +47,10 @@ export const createAuthWithEmailAndPassword = async (
 
     const hashedPassword = authentication(salt, password, confirmPassword)
 
+    if (password !== confirmPassword) {
+      return res.sendStatus(403)
+    }
+
     await createUserAuthWithEmailAndPassword(
       userName,
       email,

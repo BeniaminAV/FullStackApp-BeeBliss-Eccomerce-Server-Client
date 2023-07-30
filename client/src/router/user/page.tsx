@@ -1,5 +1,11 @@
+import Authentication from "../../components/auth/page"
+
 const User = () => {
-  return <div>User</div>
+  return (
+    <>
+      <Authentication />
+    </>
+  )
 }
 
 export default User

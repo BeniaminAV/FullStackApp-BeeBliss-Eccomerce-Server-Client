@@ -20,7 +20,7 @@ const UserMenu = () => {
       </div>
 
       <div className="lg:hidden ">
-        <LinkRoute label={<AiOutlineMenuFold size={25} />} to="" />
+        <LinkRoute label={<AiOutlineMenuFold size={25} />} to={''} />
       </div>
       
     </div>

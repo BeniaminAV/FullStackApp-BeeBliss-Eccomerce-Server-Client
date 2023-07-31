@@ -2,7 +2,6 @@ import { auth } from "../db/firebase"
 import {
   createUserAuthWithEmailAndPassword,
   signInUserWithEmailAndPassword,
-  signInWithGooglePopup,
   signOutAuth,
 } from "../db/users"
 import { authentication, random } from "../helpers"
@@ -58,22 +57,6 @@ export const createAuthWithEmailAndPassword = async (
       hashedPassword
     )
     return res.status(200).json({ userName, email, salt }).end()
-  } catch (error) {
-    return res.sendStatus(400)
-  }
-}
-
-// login with google Credentials
-export const loginWithGoogle = async (
-  req: express.Request,
-  res: express.Response
-) => {
-  try {
-    const userCredential = await signInWithGooglePopup()
-
-    const { uid, email } = userCredential.user
-
-    return res.status(200).json({ uid, email }).end()
   } catch (error) {
     return res.sendStatus(400)
   }

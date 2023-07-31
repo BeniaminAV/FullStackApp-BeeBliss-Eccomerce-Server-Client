@@ -10,16 +10,7 @@ import {
 import { doc, setDoc, getDoc } from "firebase/firestore"
 import { db } from "./firebase"
 
-//Auth with googleProvider
-const googleProvider = new GoogleAuthProvider()
-googleProvider.setCustomParameters({
-  params: "select_account",
-})
-
 export const auth = getAuth()
-export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider)
-export const signInWithGoogleRedirect = () =>
-  signInWithRedirect(auth, googleProvider)
 
 //CreateDocumentForUser
 export const createDocumentForUserAuth = async (

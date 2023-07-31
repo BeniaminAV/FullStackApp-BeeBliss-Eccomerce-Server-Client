@@ -53,6 +53,7 @@ const Register = () => {
         },
         config
       )
+
       toast.success("Resgistred !")
       resetForm()
     } catch (error: any) {
@@ -99,7 +100,7 @@ const Register = () => {
       <Button
         label="Register Now"
         onClick={onSubmit}
-        bgColor="bg-red-600 hover:bg-red-500"
+        bgColor="bg-red-600 hover:bg-red-500 text-white"
       />
     </form>
   )

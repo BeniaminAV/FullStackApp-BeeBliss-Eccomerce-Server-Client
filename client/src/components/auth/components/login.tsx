@@ -4,7 +4,6 @@ import { toast } from "react-hot-toast"
 import axios from "axios"
 import FormField from "./inputFrom"
 import Button from "../../button"
-import AuthSocial from "./authSocial"
 
 const defaultFormField = {
   email: "",
@@ -76,10 +75,8 @@ const Login = () => {
         <Button
           label="Login"
           onClick={onSubmit}
-          bgColor="bg-green-600 hover:bg-green-500"
+          bgColor="bg-green-600 hover:bg-green-500 text-white"
         />
-
-        <AuthSocial />
       </form>
     </>
   )

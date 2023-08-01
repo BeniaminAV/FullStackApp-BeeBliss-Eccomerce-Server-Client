@@ -40,8 +40,10 @@ const Login = () => {
         },
         config
       )
+      
       toast.success("You logged in!")
       resetForm()
+      
     } catch (error) {
       if (email !== password) {
         toast.error("Email or Password incorect!")
@@ -65,6 +67,7 @@ const Login = () => {
           value={email}
           onChange={handleChange}
         />
+        
         <FormField
           label="Your Password"
           type="password"
@@ -72,6 +75,7 @@ const Login = () => {
           value={password}
           onChange={handleChange}
         />
+        
         <Button
           label="Login"
           onClick={onSubmit}

@@ -27,6 +27,7 @@ const Login = () => {
 
     try {
       await signInAuthWithEmailAndPassword(email, password)
+
       toast.success("You logged in!")
       resetForm()
     } catch (error) {
@@ -52,6 +53,7 @@ const Login = () => {
           value={email}
           onChange={handleChange}
         />
+
         <FormField
           label="Your Password"
           type="password"
@@ -59,6 +61,7 @@ const Login = () => {
           value={password}
           onChange={handleChange}
         />
+
         <Button
           label="Login"
           onClick={onSubmit}

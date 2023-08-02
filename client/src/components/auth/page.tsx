@@ -40,7 +40,7 @@ const Authentication = () => {
             {variant === "LOGIN" ? (
               <p className="text-center">
                 You don t have account?
-                <strong className="cursor-pointer hover:text-neutral-500">
+                <strong className="cursor-pointer hover:text-red-500 text-red-600">
                   <br />
                   Register now
                 </strong>
@@ -48,7 +48,7 @@ const Authentication = () => {
             ) : (
               <p className="text-center">
                 You have account?
-                <strong className="cursor-pointer hover:text-neutral-500">
+                <strong className="cursor-pointer hover:text-green-500 text-green-600">
                   <br />
                   Login
                 </strong>

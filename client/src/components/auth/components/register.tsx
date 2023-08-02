@@ -1,12 +1,15 @@
 import { useState } from "react"
-import axios from "axios"
 import FormField from "./inputFrom"
 import { isEmpty } from "lodash"
 import { toast } from "react-hot-toast"
 import Button from "../../button"
+import {
+  createAuthUserWithEmailAndPassword,
+  createDocumentForUserAuth,
+} from "../../../utils/firebase/firebase"
 
 const defaultFormField = {
-  userName: "",
+  displayName: "",
   email: "",
   password: "",
   confirmPassword: "",
@@ -14,17 +17,17 @@ const defaultFormField = {
 
 const Register = () => {
   const [formField, setFormField] = useState(defaultFormField)
-  const { userName, email, password, confirmPassword } = formField
+  const { displayName, email, password, confirmPassword } = formField
 
   const resetForm = () => {
     setFormField(defaultFormField)
   }
 
-  const onSubmit = async (e: any) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (
-      isEmpty(userName) ||
+      isEmpty(displayName) ||
       isEmpty(email) ||
       isEmpty(password) ||
       isEmpty(confirmPassword)
@@ -37,27 +40,15 @@ const Register = () => {
     }
 
     try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
+      const user = await createAuthUserWithEmailAndPassword(email, password)
 
-      await axios.post(
-        "http://localhost:5000/auth/register",
-        {
-          userName,
-          email,
-          password,
-          confirmPassword,
-        },
-        config
-      )
-
+      await createDocumentForUserAuth(user, { displayName })
       toast.success("Resgistred !")
       resetForm()
     } catch (error: any) {
-      console.log(error)
+      if (error.code === "user already exists") {
+        toast.error("User exists")
+      }
     }
   }
 
@@ -72,8 +63,8 @@ const Register = () => {
       <FormField
         label="User Name"
         type="text"
-        name="userName"
-        value={userName}
+        name="displayName"
+        value={displayName}
         onChange={handleChange}
       />
       <FormField

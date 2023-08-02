@@ -4,12 +4,19 @@ import App from "./App.tsx"
 import "./styles/globals.css"
 import { BrowserRouter } from "react-router-dom"
 import ToastProvider from "./components/toast.tsx"
+import { Provider } from "react-redux"
+import { persistor, store } from "./store/store"
+import { PersistGate } from "redux-persist/integration/react"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ToastProvider />
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <ToastProvider />
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 )

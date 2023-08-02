@@ -1,9 +1,9 @@
 import { isEmpty } from "lodash"
 import { useState } from "react"
 import { toast } from "react-hot-toast"
-import axios from "axios"
 import FormField from "./inputFrom"
 import Button from "../../button"
+import { signInAuthWithEmailAndPassword } from "../../../utils/firebase/firebase"
 
 const defaultFormField = {
   email: "",
@@ -26,20 +26,7 @@ const Login = () => {
     }
 
     try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-
-      await axios.post(
-        "http://localhost:5000/auth/login",
-        {
-          email,
-          password,
-        },
-        config
-      )
+      await signInAuthWithEmailAndPassword(email, password)
       toast.success("You logged in!")
       resetForm()
     } catch (error) {

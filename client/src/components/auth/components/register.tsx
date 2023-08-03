@@ -45,6 +45,7 @@ const Register = () => {
       await createDocumentForAuth(user, { displayName })
       toast.success("Resgistred !")
       resetForm()
+      
     } catch (error: any) {
       if (error.code === "user already exists") {
         toast.error("User exists")

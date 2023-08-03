@@ -23,8 +23,8 @@ const Register = () => {
     setFormField(defaultFormField)
   }
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const onSubmit = async (event: any) => {
+    event.preventDefault()
 
     if (
       isEmpty(displayName) ||
@@ -37,15 +37,15 @@ const Register = () => {
 
     if (password !== confirmPassword) {
       toast.error("Password doesn't match!")
+      return
     }
 
     try {
-      const user = await createUserAuthWithEmailAndPassword(email, password)
+      const users = await createUserAuthWithEmailAndPassword(email, password)
 
-      await createDocumentForAuth(user, { displayName })
+      await createDocumentForAuth(users, { displayName })
       toast.success("Resgistred !")
       resetForm()
-      
     } catch (error: any) {
       if (error.code === "user already exists") {
         toast.error("User exists")
@@ -53,8 +53,8 @@ const Register = () => {
     }
   }
 
-  const handleChange = (e: any) => {
-    const { value, name } = e.target
+  const handleChange = (event: any) => {
+    const { name, value } = event.target
 
     setFormField({ ...formField, [name]: value })
   }
@@ -91,7 +91,6 @@ const Register = () => {
       />
       <Button
         label="Register Now"
-        onClick={onSubmit}
         bgColor="bg-red-600 hover:bg-red-500 text-white"
       />
     </form>

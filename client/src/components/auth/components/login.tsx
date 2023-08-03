@@ -4,6 +4,7 @@ import { toast } from "react-hot-toast"
 import FormField from "./inputFrom"
 import Button from "../../button"
 import { signInAuthWithEmailAndPassword } from "../../../utils/firebase/firebase"
+import Credential from "./credential"
 
 const defaultFormField = {
   email: "",
@@ -68,6 +69,8 @@ const Login = () => {
           bgColor="bg-green-600 hover:bg-green-500 text-white"
         />
       </form>
+
+      <Credential />
     </>
   )
 }

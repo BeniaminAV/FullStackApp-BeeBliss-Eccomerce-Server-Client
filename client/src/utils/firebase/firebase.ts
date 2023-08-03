@@ -43,21 +43,18 @@ export const createDocumentForAuth = async (
 ) => {
   if (!userAuth) return
 
-  const { displayName, email } = userAuth
-
   const userDocRef = doc(db, "users", userAuth.uid)
 
   const onSnapshot = await getDoc(userDocRef)
 
   if (!onSnapshot.exists()) {
-    const newDisplayName = displayName
-    const newEmail = email
+    const { email, displayName } = userAuth
     const createdAt = new Date()
 
     try {
       await setDoc(userDocRef, {
-        email: newEmail,
-        displayName: newDisplayName,
+        displayName,
+        email,
         createdAt,
         ...additionalInformation,
       })
@@ -71,8 +68,8 @@ export const createDocumentForAuth = async (
 
 //create login with email and password
 export const createUserAuthWithEmailAndPassword = async (
-  email: any,
-  password: any
+  email: string,
+  password: string
 ) => {
   if (!email || !password) return
 
@@ -81,8 +78,8 @@ export const createUserAuthWithEmailAndPassword = async (
 
 //login with email and password
 export const signInAuthWithEmailAndPassword = async (
-  email: any,
-  password: any
+  email: string,
+  password: string
 ) => {
   if (!email || !password) return
 

@@ -70,6 +70,7 @@ const Login = () => {
         />
       </form>
 
+      // Login with Google Provider
       <Credential />
     </>
   )

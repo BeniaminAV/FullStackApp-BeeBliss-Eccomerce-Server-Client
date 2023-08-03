@@ -3,6 +3,7 @@ import { signInWithGooglePopup } from "../../../utils/firebase/firebase"
 import Button from "../../button"
 
 const Credential = () => {
+  
   const signIn = async () => {
     try {
       await signInWithGooglePopup()

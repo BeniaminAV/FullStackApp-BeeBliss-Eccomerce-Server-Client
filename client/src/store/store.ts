@@ -8,13 +8,15 @@ import { rootReducers } from "./rootReducer"
 const persistConfig = {
   key: "root",
   storage,
-  blacklist: ["user"],
+  blacklist: ["users"],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducers)
-const middleWares: any = [
-  process.env.NODE_ENV !== "production" && logger,
-].filter(Boolean)
+const middleWares = []
+
+if (process.env.NODE_ENV !== "production") {
+  middleWares.push(logger)
+}
 
 const composedEnhancers = compose(applyMiddleware(...middleWares))
 export const store = createStore(persistedReducer, undefined, composedEnhancers)

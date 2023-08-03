@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux"
 import Authentication from "../../components/auth/page"
-import { selectCurrentUser } from "../../store/user/user.select"
 import UserSession from "../../components/auth/users"
+import { selectCurrentUser } from "../../store/user/user.selector"
 
 const User = () => {
-  const user = useSelector(selectCurrentUser)
+  const users = useSelector(selectCurrentUser)
 
-  return <>{user ? <UserSession /> : <Authentication />}</>
+  return <>{users ? <UserSession /> : <Authentication />}</>
 }
 
 export default User

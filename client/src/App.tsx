@@ -12,8 +12,27 @@ import {
   User,
   WorldHoney,
 } from "./router/index"
+import { useDispatch } from "react-redux"
+import { useEffect } from "react"
+import { setCurrentUser } from "./store/user/user.action"
+import {
+  createDocumentForAuth,
+  onAuthStateChangedListener,
+} from "./utils/firebase/firebase"
 
 const App = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChangedListener((user: any) => {
+      if (user) {
+        createDocumentForAuth(user)
+      }
+      dispatch(setCurrentUser(user))
+    })
+    return unsubscribe
+  }, [dispatch])
+
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>

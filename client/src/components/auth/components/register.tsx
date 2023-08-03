@@ -4,8 +4,8 @@ import { isEmpty } from "lodash"
 import { toast } from "react-hot-toast"
 import Button from "../../button"
 import {
-  createAuthUserWithEmailAndPassword,
-  createDocumentForUserAuth,
+  createDocumentForAuth,
+  createUserAuthWithEmailAndPassword,
 } from "../../../utils/firebase/firebase"
 
 const defaultFormField = {
@@ -40,9 +40,9 @@ const Register = () => {
     }
 
     try {
-      const user = await createAuthUserWithEmailAndPassword(email, password)
+      const user = await createUserAuthWithEmailAndPassword(email, password)
 
-      await createDocumentForUserAuth(user, { displayName })
+      await createDocumentForAuth(user, { displayName })
       toast.success("Resgistred !")
       resetForm()
     } catch (error: any) {

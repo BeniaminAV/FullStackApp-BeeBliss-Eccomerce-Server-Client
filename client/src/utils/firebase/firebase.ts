@@ -12,12 +12,7 @@ import {
 import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBbqJky4ShssPDP53E8BdKdsaf7kzHJTsA",
-  authDomain: "fullstackapp-1cef1.firebaseapp.com",
-  projectId: "fullstackapp-1cef1",
-  storageBucket: "fullstackapp-1cef1.appspot.com",
-  messagingSenderId: "923383912606",
-  appId: "1:923383912606:web:75ec0832a21c15caebc38f",
+YOUR APPI KEY
 }
 
 //initialize firebase

@@ -37,15 +37,18 @@ export const signInWithGoogleRedirect = () =>
 //create DOC
 const db = getFirestore()
 
-export const createDocumentForAuth = async (
+export const createUserDocumentForAuth = async (
   userAuth: any,
   additionalInformation = {}
 ) => {
   if (!userAuth) return
 
   const userDocRef = doc(db, "users", userAuth.uid)
+  console.log(userDocRef)
 
   const onSnapshot = await getDoc(userDocRef)
+  console.log(onSnapshot)
+  console.log(onSnapshot.exists())
 
   if (!onSnapshot.exists()) {
     const { email, displayName } = userAuth
@@ -67,7 +70,7 @@ export const createDocumentForAuth = async (
 }
 
 //create login with email and password
-export const createUserAuthWithEmailAndPassword = async (
+export const createAuthUserWithEmailAndPassword = async (
   email: string,
   password: string
 ) => {
@@ -92,3 +95,6 @@ export const signOutUser = async () => await signOut(auth)
 // control user
 export const onAuthStateChangedListener = (callback: any) =>
   onAuthStateChanged(auth, callback)
+
+
+  

@@ -1,12 +1,12 @@
 import { useState } from "react"
 import FormField from "./inputFrom"
 import { isEmpty } from "lodash"
-import { toast } from "react-hot-toast"
 import Button from "../../button"
 import {
-  createDocumentForAuth,
-  createUserAuthWithEmailAndPassword,
+  createUserDocumentForAuth,
+  createAuthUserWithEmailAndPassword,
 } from "../../../utils/firebase/firebase"
+import { toast } from "react-hot-toast"
 
 const defaultFormField = {
   displayName: "",
@@ -41,11 +41,12 @@ const Register = () => {
     }
 
     try {
-      const users = await createUserAuthWithEmailAndPassword(email, password)
+      // @ts-ignore */}
+      const { user } = await createAuthUserWithEmailAndPassword(email, password)
 
-      await createDocumentForAuth(users, { displayName })
-      toast.success("Resgistred !")
+      await createUserDocumentForAuth(user, { displayName })
       resetForm()
+      toast.success("Resgistred !")
     } catch (error: any) {
       if (error.code === "user already exists") {
         toast.error("User exists")

@@ -9,17 +9,7 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth"
-import {
-  doc,
-  setDoc,
-  getDoc,
-  getFirestore,
-  collection,
-  writeBatch,
-  query,
-  getDocs,
-} from "firebase/firestore"
-import { batch } from "react-redux"
+import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBbqJky4ShssPDP53E8BdKdsaf7kzHJTsA",

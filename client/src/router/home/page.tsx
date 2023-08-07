@@ -1,7 +1,9 @@
+import Product from "../../components/products/product"
+
 const Home = () => {
   return (
-    <div>
-      <h2>Home</h2>
+    <div className="pt-20">
+      <Product />
     </div>
   )
 }

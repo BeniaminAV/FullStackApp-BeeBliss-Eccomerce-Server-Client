@@ -69,8 +69,6 @@ const Login = () => {
           bgColor="bg-green-600 hover:bg-green-500 text-white"
         />
       </form>
-
-      // Login with Google Provider
       <Credential />
     </>
   )

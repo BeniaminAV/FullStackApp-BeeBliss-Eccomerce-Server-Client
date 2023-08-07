@@ -6,22 +6,20 @@ import Links from "./links"
 
 const Navbar = () => {
   return (
-    <div className="fixed z-10 w-full">
-      <div className="py-4 border-b-[1px] bg-white">
+    <main>
+      <div className="py-4 border-b-[1px] bg-white fixed z-10 w-full">
         <Container>
           <div className="flex flex-row items-center justify-between">
-            
             <Logo />
 
             <Links />
 
             <UserMenu />
-            
           </div>
         </Container>
       </div>
       <Outlet />
-    </div>
+    </main>
   )
 }
 

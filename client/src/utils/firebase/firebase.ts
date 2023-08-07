@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app"
+import firebase from "firebase/compat/app"
 import {
   getAuth,
   signInWithPopup,
@@ -9,7 +9,17 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth"
-import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore"
+import {
+  doc,
+  setDoc,
+  getDoc,
+  getFirestore,
+  collection,
+  writeBatch,
+  query,
+  getDocs,
+} from "firebase/firestore"
+import { batch } from "react-redux"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBbqJky4ShssPDP53E8BdKdsaf7kzHJTsA",
@@ -21,7 +31,7 @@ const firebaseConfig = {
 }
 
 //initialize firebase
-export const firebase = initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig)
 
 //auth googleProvider
 const auth = getAuth()
@@ -95,6 +105,3 @@ export const signOutUser = async () => await signOut(auth)
 // control user
 export const onAuthStateChangedListener = (callback: any) =>
   onAuthStateChanged(auth, callback)
-
-
-  

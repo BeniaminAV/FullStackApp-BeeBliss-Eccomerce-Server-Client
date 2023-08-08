@@ -12,6 +12,7 @@ const LaptisorProduct = () => {
 
   const fetchProducts = async () => {
     try {
+            //Laptisor product taken from back-end with axios
       const response = await axios.get("http://localhost:5000/product/laptisor")
       setHoney(response.data)
     } catch (error) {

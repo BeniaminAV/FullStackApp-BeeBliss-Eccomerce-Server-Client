@@ -1,5 +1,7 @@
 import Honey from "model/honey"
 
+//I have deleted all the pictures from the back-end, something is not working properly.
+
 const Honeys: Honey[] = [
   {
     title: "Laptisor",
@@ -267,7 +269,6 @@ const Honeys: Honey[] = [
       },
       {
         id: 8,
-        name: "Miere polifloră din Cuba 270g",
         description: "",
         price: 25.0,
       },

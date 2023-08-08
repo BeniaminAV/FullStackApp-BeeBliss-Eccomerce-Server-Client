@@ -12,6 +12,7 @@ const CandyProduct = () => {
 
   const fetchProducts = async () => {
     try {
+      //Candy product taken from back-end with axios
       const response = await axios.get("http://localhost:5000/product/candy")
       setHoney(response.data)
     } catch (error) {

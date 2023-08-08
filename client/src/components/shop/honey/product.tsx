@@ -12,6 +12,7 @@ const WorldHoneyProduct = () => {
 
   const fetchProducts = async () => {
     try {
+            //World-Honey product taken from back-end with axios
       const response = await axios.get(
         "http://localhost:5000/product/world-honey"
       )

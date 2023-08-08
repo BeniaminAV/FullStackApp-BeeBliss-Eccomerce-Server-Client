@@ -5,8 +5,11 @@ import compression from "compression"
 import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 import router from "./router/router"
+import morgan from "morgan"
 
 const app = express()
+
+app.use(morgan("dev"))
 
 app.use(express.json())
 

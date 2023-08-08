@@ -7,7 +7,7 @@ import {
   Honey,
   Laptisor,
   Navigation,
-  Product,
+  Products,
   Tonic,
   User,
   WorldHoney,
@@ -37,7 +37,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product" element={<Products />} />
         <Route path="/laptisor" element={<Laptisor />} />
         <Route path="/honey" element={<Honey />} />
         <Route path="/world-honey" element={<WorldHoney />} />

@@ -1,7 +1,11 @@
-import React from "react";
+import TonicProduct from "../../components/shop/tonic/product"
 
 const Tonic = () => {
-  return <div>Tonic</div>;
-};
+  return (
+    <div className="pt-20">
+      <TonicProduct />
+    </div>
+  )
+}
 
-export default Tonic;
+export default Tonic

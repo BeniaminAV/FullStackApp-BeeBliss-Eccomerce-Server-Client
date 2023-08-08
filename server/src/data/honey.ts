@@ -1,4 +1,4 @@
-import Honey from "../model/honey"
+import Honey from "model/honey"
 
 const Honeys: Honey[] = [
   {
@@ -10,7 +10,6 @@ const Honeys: Honey[] = [
         description:
           "Este vitalizant, imunomodulator, contribuie la buna functionare a sistemului imunitar, tonic in perioadele de epuizare fizica si psihica",
         price: 135.0,
-        image: "./assets/laptisor/1.png",
       },
       {
         id: 2,
@@ -18,7 +17,6 @@ const Honeys: Honey[] = [
         description:
           "Este vitalizant, imunomodulator, contribuie la buna functionare a sistemului imunitar, tonic in perioadele de epuizare fizica si psihica",
         price: 101.0,
-        image: "./assets/laptisor/2.png",
       },
       {
         id: 3,
@@ -26,7 +24,6 @@ const Honeys: Honey[] = [
         description:
           "Este vitalizant, imunomodulator, contribuie la buna functionare a sistemului imunitar, tonic in perioadele de epuizare fizica si psihica.",
         price: 52.0,
-        image: "./assets/laptisor/3.png",
       },
       {
         id: 4,
@@ -34,7 +31,6 @@ const Honeys: Honey[] = [
         description:
           "Contine o gama larga de substante nutritive: vitamine, minerale, aminoacizi esentiali, acetilcolina si Acid 10-HDA (acid 10-hidro-2-decenoic).",
         price: 19.0,
-        image: "./assets/laptisor/4.png",
       },
       {
         id: 5,
@@ -42,7 +38,6 @@ const Honeys: Honey[] = [
         description:
           "Contine o gama larga de substante nutritive: vitamine, minerale, aminoacizi esentiali, acetilcolina si Acid 10-HDA (acid 10-hidro-2-decenoic).",
         price: 39.0,
-        image: "./assets/laptisor/5.png",
       },
       {
         id: 6,
@@ -50,7 +45,6 @@ const Honeys: Honey[] = [
         description:
           "Contine o gama larga de substante nutritive: vitamine, minerale, aminoacizi esentiali, acetilcolina si Acid 10-HDA (acid 10-hidro-2-decenoic).",
         price: 84.0,
-        image: "./assets/laptisor/6.png",
       },
       {
         id: 7,
@@ -58,7 +52,6 @@ const Honeys: Honey[] = [
         description:
           "Contine o gama larga de substante nutritive: vitamine, minerale, aminoacizi esentiali, acetilcolina si Acid 10-HDA (acid 10-hidro-2-decenoic).",
         price: 22.0,
-        image: "./assets/laptisor/7.png",
       },
       {
         id: 8,
@@ -66,7 +59,6 @@ const Honeys: Honey[] = [
         description:
           "Contine o gama larga de substante nutritive: vitamine, minerale, aminoacizi esentiali, acetilcolina si Acid 10-HDA (acid 10-hidro-2-decenoic).",
         price: 45.0,
-        image: "./assets/laptisor/8.png",
       },
       {
         id: 9,
@@ -74,7 +66,6 @@ const Honeys: Honey[] = [
         description:
           "Contine o gama larga de substante nutritive: vitamine, minerale, aminoacizi esentiali, acetilcolina si Acid 10-HDA (acid 10-hidro-2-decenoic).",
         price: 93.5,
-        image: "./assets/laptisor/9.png",
       },
     ],
   },
@@ -87,7 +78,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea de Floarea Soarelui este dulce si foarte parfumata, cunoscuta pentru proprietatile sale tonice si revigorante.",
         price: 17.0,
-        image: "./assets/honey/1.jpg",
       },
       {
         id: 2,
@@ -95,7 +85,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea de Padure este singurul sortiment de miere care nu provine din nectarul florilor.",
         price: 25.0,
-        image: "./assets/honey/2.jpg",
       },
       {
         id: 3,
@@ -103,7 +92,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea de Rapita are o culoare galben pal, alburie si o textura cremoasa.",
         price: 18.0,
-        image: "./assets/honey/3.jpg",
       },
       {
         id: 4,
@@ -111,7 +99,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea poliflora este o miere completa, obtinuta din nectarul mai multor specii de plante care infloresc in aceeasi perioada a anului.",
         price: 16.0,
-        image: "./assets/honey/4.jpg",
       },
       {
         id: 5,
@@ -119,7 +106,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea de Tei este una dintre cele mai apreciate sortimente de miere in toata lumea.",
         price: 17.0,
-        image: "./assets/honey/5.jpg",
       },
       {
         id: 6,
@@ -127,7 +113,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea de Salcam este usor de recunoscut, avand o culoare alb-galbuie, extrem de frumoasa, stralucitoare si translucida.",
         price: 29.0,
-        image: "./assets/honey/6.jpg",
       },
       {
         id: 7,
@@ -135,7 +120,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea poliflora este o miere completa, obtinuta din nectarul mai multor specii de plante care infloresc in aceeasi perioada a anului.",
         price: 42.0,
-        image: "./assets/honey/7.jpg",
       },
       {
         id: 8,
@@ -143,7 +127,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea de Tei este una dintre cele mai apreciate sortimente de miere.",
         price: 43.0,
-        image: "./assets/honey/8.jpg",
       },
       {
         id: 9,
@@ -151,7 +134,6 @@ const Honeys: Honey[] = [
         description:
           "Mierea de Salcam este usor de recunoscut, avand o culoare alb-galbuie, extrem de frumoasa, stralucitoare si translucida.",
         price: 66.5,
-        image: "./assets/honey/9.jpg",
       },
     ],
   },
@@ -164,7 +146,6 @@ const Honeys: Honey[] = [
         description:
           "CONTRIBUIE LA MENTINEREA SANATATII CAILOR RESPIRATORII SUPERIOARE",
         price: 19.6,
-        image: "./assets/candy/1.jpg",
       },
       {
         id: 2,
@@ -172,49 +153,42 @@ const Honeys: Honey[] = [
         description:
           "Conurile cu miere si pin sunt fabricate dupa o reteta traditionala si au un gust delicios de miere si aroma inconfundabila de pin.",
         price: 13.0,
-        image: "./assets/candy/2.jpg",
       },
       {
         id: 3,
         name: "Perle cu miere, zmeura si cirese 100g",
         description: "Perle cu miere, zmeura si cirese 100g",
         price: 13.0,
-        image: "./assets/candy/3.jpg",
       },
       {
         id: 4,
         name: "Perle cu miere si fructe de padure 100g",
         description: "Perle cu miere si fructe de padure 100g",
         price: 13.0,
-        image: "./assets/candy/4.jpg",
       },
       {
         id: 5,
         name: "Perle cu miere, portocale si lamaie 100g",
         description: "Perle cu miere, portocale si lamaie 100g",
         price: 13.0,
-        image: "./assets/candy/5.jpg",
       },
       {
         id: 6,
         name: "Perle cu miere si portocale 100g",
         description: "Perle cu miere, portocale si lamaie 100g",
         price: 13.0,
-        image: "./assets/candy/6.jpg",
       },
       {
         id: 7,
         name: "Perle cu miere, propolis si echinacea 100g",
         description: "Perle cu miere, propolis si echinacea",
         price: 14.0,
-        image: "./assets/candy/7.jpg",
       },
       {
         id: 8,
         name: "Perle cu miere si ginseng 100g",
         description: "PERLE CU MIERE SI GINSENG 100G",
         price: 14.0,
-        image: "./assets/candy/8.jpg",
       },
       {
         id: 9,
@@ -222,7 +196,6 @@ const Honeys: Honey[] = [
         description:
           "Perlele cu miere si laptisor de matca combina doua dintre cele mai benefice produse pe care stupul le pune la dispozitie.",
         price: 14.5,
-        image: "./assets/candy/9.jpg",
       },
       {
         id: 10,
@@ -230,7 +203,6 @@ const Honeys: Honey[] = [
         description:
           "Perlele cu miere sunt bomboane tip drops ce au un gust delicios",
         price: 13.0,
-        image: "./assets/candy/10.jpg",
       },
       {
         id: 11,
@@ -238,7 +210,6 @@ const Honeys: Honey[] = [
         description:
           "Perlele cu miere mix pectoral sunt adevarate delicatese cu gust si aroma inconfundabile.",
         price: 13.0,
-        image: "./assets/candy/11.jpg",
       },
       {
         id: 12,
@@ -246,7 +217,6 @@ const Honeys: Honey[] = [
         description:
           "Perlele cu propolis sunt ajutorul dumneavoastra in calmarea tusei si a durerilor in gat.",
         price: 14.0,
-        image: "./assets/candy/12.jpg",
       },
     ],
   },
@@ -258,56 +228,48 @@ const Honeys: Honey[] = [
         name: "Miere de mană 270g",
         description: "",
         price: 30.0,
-        image: "./assets/international/1.jpg",
       },
       {
         id: 2,
         name: "MIERE DE MANUKA MGO 250+ 270g",
         description: "",
         price: 116.0,
-        image: "./assets/international/2.jpg",
       },
       {
         id: 3,
         name: "Miere de lavandă 270g",
         description: "",
         price: 33.0,
-        image: "./assets/international/3.jpg",
       },
       {
         id: 4,
         name: "Miere de portocal 270g",
         description: "",
         price: 33.0,
-        image: "./assets/international/4.jpg",
       },
       {
         id: 5,
         name: "Miere de eucalipt 270g",
         description: "",
         price: 33.0,
-        image: "./assets/international/5.jpg",
       },
       {
         id: 6,
         name: "Miere de lămâi 270 g",
         description: "",
         price: 33.0,
-        image: "./assets/international/6.jpg",
       },
       {
         id: 7,
         name: "Miere de castan 270g",
         description: "",
         price: 33.0,
-        image: "./assets/international/7.jpg",
       },
       {
         id: 8,
         name: "Miere polifloră din Cuba 270g",
         description: "",
         price: 25.0,
-        image: "./assets/international/8.jpg",
       },
     ],
   },
@@ -319,14 +281,12 @@ const Honeys: Honey[] = [
         name: "Apitotal forte 200 g",
         description: "APITOTAL FORTE 200g - Imunitate si Vitalitate",
         price: 61.0,
-        image: "./assets/tonic/1.jpg",
       },
       {
         id: 2,
         name: "Apijunior imunizant si vitaminizant 200 g",
         description: "APIJUNIOR 200g - Imunizant si Vitaminizant",
         price: 29.0,
-        image: "./assets/tonic/2.jpg",
       },
       {
         id: 3,
@@ -334,7 +294,6 @@ const Honeys: Honey[] = [
         description:
           "PASTURA IN MIERE 200g - Tonic general cu efect regenerator",
         price: 38.0,
-        image: "./assets/tonic/3.jpg",
       },
       {
         id: 4,
@@ -342,7 +301,6 @@ const Honeys: Honey[] = [
         description:
           "APITOTAL FORTE 200g - Imunitate si Vitalitate + SPRAY DE GAT FORTE cu Propolis 20ml",
         price: 77.0,
-        image: "./assets/tonic/4.jpg",
       },
       {
         id: 5,
@@ -350,7 +308,6 @@ const Honeys: Honey[] = [
         description:
           "APIJUNIOR 200g - Imunizant si Vitaminizant + SPRAY DE GAT Propolis API JUNIOR 20ml",
         price: 48.0,
-        image: "./assets/tonic/5.jpg",
       },
     ],
   },

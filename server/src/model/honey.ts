@@ -5,6 +5,5 @@ export default interface Honey {
     name: string
     description: string
     price: number
-    image: string
   }[]
 }
